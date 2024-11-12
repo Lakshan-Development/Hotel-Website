@@ -74,85 +74,85 @@
         <div class="container">
             <div class="gallery-row">
                 <div class="gallery-item shadow">
-                    <img src="image/1111.webp" alt="gallery img">
+                    <img src="Image/1111.webp" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/2222.jpg" alt="gallery img">
+                    <img src="Image/2222.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/343.jpg" alt="gallery img">
+                    <img src="Image/343.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/434.jpg" alt="gallery img">
+                    <img src="Image/434.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/05.jpg" alt="gallery img">
+                    <img src="Image/05.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/6666.webp" alt="gallery img">
+                    <img src="Image/6666.webp" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/7777.webp" alt="gallery img">
+                    <img src="Image/7777.webp" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/8888.jpg" alt="gallery img">
+                    <img src="Image/8888.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/9999.jpg" alt="gallery img">
+                    <img src="Image/9999.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/10@10.jpg" alt="gallery img">
+                    <img src="Image/10@10.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/1111.webp" alt="gallery img">
+                    <img src="Image/1111.webp" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/12@12.webp" alt="gallery img">
+                    <img src="Image/12@12.webp" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/13@13.jpg" alt="gallery img">
+                    <img src="Image/13@13.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
                 <div class="gallery-item shadow">
-                    <img src="image/14@14.jpg" alt="gallery img">
+                    <img src="Image/14@14.jpg" alt="gallery img">
                     <span class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </span>
@@ -174,7 +174,7 @@
             <button type="button" id="next-btn" class="flex">
                 <i class="fas fa-chevron-right"></i>
             </button>
-            <img src="image/1111.webp">
+            <img src="Image/1111.webp">
         </div>
     </div>
     <!-- end of img modal -->
@@ -263,7 +263,7 @@
     <!-- js -->
     <script src="js/script.js"></script>
     <script>
-        // image modal
+        // Image modal
         const allGalleryItem = document.querySelectorAll('.gallery-item');
         const imgModalDiv = document.getElementById('img-modal-box');
         const modalCloseBtn = document.getElementById('modal-close-btn');
@@ -271,16 +271,16 @@
         const prevBtn = document.getElementById('prev-btn');
         let imgIndex = 0;
 
-        // Open modal and set the image based on the clicked item
+        // Open modal and set the Image based on the clicked item
         allGalleryItem.forEach((galleryItem, index) => {
             galleryItem.addEventListener('click', () => {
                 imgModalDiv.style.display = "block";
-                imgIndex = index; // Set the current image index
+                imgIndex = index; // Set the current Image index
                 showImageContent(imgIndex);
             });
         });
 
-        // Show the image content based on the current index
+        // Show the Image content based on the current index
         function showImageContent(index) {
             const imgSrc = allGalleryItem[index].querySelector('img').src;
             imgModalDiv.querySelector('#img-modal img').src = imgSrc;
@@ -290,7 +290,7 @@
         nextBtn.addEventListener('click', () => {
             imgIndex++;
             if (imgIndex >= allGalleryItem.length) {
-                imgIndex = 0; // Go back to the first image if at the end
+                imgIndex = 0; // Go back to the first Image if at the end
             }
             showImageContent(imgIndex);
         });
@@ -299,7 +299,7 @@
         prevBtn.addEventListener('click', () => {
             imgIndex--;
             if (imgIndex < 0) {
-                imgIndex = allGalleryItem.length - 1; // Go to the last image if at the start
+                imgIndex = allGalleryItem.length - 1; // Go to the last Image if at the start
             }
             showImageContent(imgIndex);
         });
